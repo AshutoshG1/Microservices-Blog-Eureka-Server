@@ -1,0 +1,30 @@
+
+spring:
+  application:
+    name: COMMENT
+  # Data Source Configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/commentdb
+    username: root
+    password: test
+
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Server Configuration
+server:
+  port: 8082
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+

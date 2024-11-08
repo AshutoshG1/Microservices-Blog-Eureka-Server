@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: POST
+  # Data Source Configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/postdb
+    username: root
+    password: test
+
+  # JPA Configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Server Configuration
+server:
+  port: 8081
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
